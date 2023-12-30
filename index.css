@@ -1,0 +1,239 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-decoration: none;
+}
+header{
+    background-color: aliceblue;  
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-bottom: 1px solid snow;
+    z-index: 100;
+}
+header nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+    height: 80px;
+}
+header nav  img {
+    display: block;
+    position: relative;
+    border-radius: 50%;
+    box-sizing: border-box;
+    height: 70px;
+    width: 70px;
+    right: 40px;
+    left: 20px;
+}
+header nav h1{
+    position: relative;
+    left: 20px;
+    font-size: 14px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+header nav .links{
+    display: flex;
+}
+header nav .links li{
+    right: 80px;
+    position: relative;
+    margin: 0 15px;
+    height: 20px;
+    line-height: 20px;
+    list-style: none;
+    left: 20px;
+}
+header nav .links li::after{
+position: absolute;
+content:'';
+bottom: 0;
+left: 0;
+width: 0;
+height: 2px;
+background-color: rgb(10, 136, 136);
+transition: 0.4s;
+}
+header nav .links li:hover:after,
+header nav .links li.active::after{
+    width: 100%;
+}
+.box{
+    max-width: 400px;
+    width: 100%;
+}
+.box .serch-box{
+    position: relative;
+    height: 50px;
+    max-width: 250px;
+    background:rgb(39, 157, 230);
+    margin: auto; 
+    box-shadow:0 5px 10px rgba(0, 0, 0, 0.744);
+    border-radius: 25px;
+    bottom: 10px;
+    left: 20px;
+}
+#check:checked ~ .serch-box{
+    max-width: 380px;
+}
+.serch-box input{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius:25px;
+    background-color: snow;
+    outline: none;
+    border: none;
+    padding-left: 20px ;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+.serch-box .icon{
+    position: absolute;
+    right: -2px;
+    top: 0;
+    width: 10%;
+    background-color: rgb(39, 157, 230);
+    height: 100%;
+    text-align: center;
+    line-height: 50px ;
+    color: snow;
+    font-size: 20px;
+    border-radius: 0 25px 25px 0;
+}
+/* ------------------------------------------MAIN WORK------------------------------------------------------------------------------- */
+.main-section{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75),rgba(0, 0, 0, 0.75)),url(احلي-صور-علم-مصر-5.jpg);
+    background-size: cover;
+    background-position:center ;
+    overflow: hidden;
+}
+.main-section .container{
+    width: 85%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    height: 100%;
+}
+
+.main-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    z-index: 1;
+}
+img{
+    height: 400px;
+    width: 350px;
+    border-radius: 50px;
+}
+.card
+{
+    height: 400px;
+    border-radius: 50px;
+    margin: 50px;
+    box-shadow: 5px 5px 20px snow;
+    overflow: hidden;
+}
+.intro{
+    height: 70px;
+    width: 350px;
+    border-radius: 50px;
+    padding: 6px;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 122px;
+    background: rgba(0, 0, 0, 0.589);
+    color: azure;
+}
+h1{
+    margin: 10px;
+    font-size: 20px;
+}
+p{
+    font-size: 12px;
+    margin: 10px;
+    visibility: hidden;
+    opacity: 0;
+}
+
+a{
+    font-size: 15px;
+    margin: 10px;
+    visibility: hidden;
+    opacity: 0;
+}
+button{
+    position: relative;
+    width: 70px;
+    height: 30px;
+    border-radius: 40px;
+    bottom:20px;
+    left: 20px;
+    background-color: goldenrod;
+    visibility: hidden;
+    opacity: 0;
+}
+button span{
+    color: whitesmoke;
+}
+.card:hover {
+    cursor: pointer;
+}
+.card:hover .intro{
+    height: 400px;
+    bottom: 122px;
+    background-color: rgba(0, 0, 0, 0.685);
+    transition: 0.4s;
+}
+.card:hover p{
+    opacity: 1;
+    visibility: visible;
+}
+.card:hover img{
+    transform: scale(1.1) rotate(3deg);
+    transition: 0.4s;
+}
+.card:hover button{
+    opacity: 1;
+    visibility: visible;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.card:hover a{
+    opacity: 1;
+    visibility: visible;
+}
+button:active{
+    transform: scale(0.90);
+}
+button:hover{
+    background-color: #777;
+    transition: all 0.2s ease;
+}
+
+
+
+
+
+
+
+
+
+
+
